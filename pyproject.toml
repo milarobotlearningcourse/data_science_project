@@ -24,6 +24,9 @@ dependencies = [
 llm = [
     "accelerate>=1,<2",
     "bitsandbytes>=0.45,<1",
+    # Colab preinstalls older peft and sentence-transformers that break with transformers v5.
+    "peft>=0.18",
+    "sentence-transformers>=5",
     "torch>=2.6",
     "transformers>=4.56",
 ]
